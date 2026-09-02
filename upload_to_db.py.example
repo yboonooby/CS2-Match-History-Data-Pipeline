@@ -1,0 +1,20 @@
+import pandas as pd
+from sqlalchemy import create_engine
+
+df = pd.read_csv('cs2_matches.csv')
+
+# --- Credentials to change. ---
+
+DB_USER = 'YOUR_USER'
+DB_PASS = 'YOUR_PASSWORD'
+DB_HOST = 'localhost' # Usual host for local databases.
+DB_PORT = '5432' # Default PostgreSQL port.
+DB_NAME = 'YOUR_DATABASE_NAME'
+
+# ^^^ Credentials to change. ^^^
+
+engine = create_engine(f'postgresql://{DB_USER}:{DB_PASS}@{DB_HOST}:{DB_PORT}/{DB_NAME}')
+
+df.to_sql('cs2_matches', engine, if_exists='replace', index=False)
+
+print("Uploading done.")

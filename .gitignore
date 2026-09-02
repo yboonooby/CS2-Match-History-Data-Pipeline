@@ -1,0 +1,18 @@
+# Sensitive Information
+upload_to_db.py
+
+# My Own Match History
+*.html
+*.csv
+
+# Irrelevant Python Byproducts
+__pycache__/
+*.pyc
+.env
+.venv/
+env/
+venv/
+
+# Irrelevant Windows/Mac Folders
+.DS_Store
+Thumbs.db
