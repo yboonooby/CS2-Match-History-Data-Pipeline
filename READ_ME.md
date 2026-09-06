@@ -4,7 +4,7 @@ An E2E data analytics pipeline, converting raw CS2 match history HTML exports us
 
 ## Tech Stack
 
-* **ETL / SCRIPTING:** Python (Pandas, BeautifulSoup)
+* **ETL / Scripting:** Python (Pandas, BeautifulSoup)
 * **Database:** PostgreSQL
 * **Database Driver:** SQLAlchemy, psycopg2
 * **Database GUI:** DBeaver
@@ -12,10 +12,10 @@ An E2E data analytics pipeline, converting raw CS2 match history HTML exports us
 
 ## Pipeline Architecture
 
-**Extraction & cleaning (convert.py):** 
+**Extraction & Cleaning (convert.py):** 
 Parses the raw CS2 match history HTML (cs2matches.html), cleans missing/formatted numeric strings, and exports into a standardised CSV file.
 
-**Database and upload (upload_to_db.py):**
+**Database & Upload (upload_to_db.py):**
 Establishes a connection to PostgreSQL via SQLAlchemy and loads the dataset into the "cs2_matches" table.
 
 **Advanced SQL Analytics (sql/):**
